@@ -2,7 +2,7 @@
 
 ///// Default Parameters
 
-const bookings = [];
+/* const bookings = [];
 
 const createBooking = function (
   //ES 6
@@ -28,3 +28,27 @@ createBooking('LH123', 2, 800);
 createBooking('LH123', 5);
 
 createBooking('LH123', undefined, 1000);
+ */
+
+// /////// VALUES VS REFERENCE
+
+const flight = 'LH123';
+const tako = {
+  name: 'Tako GIO',
+  passport: 125484564,
+};
+
+const checkIn = function (flightNum, passenger) {
+  flightNum = 'LH999';
+  passenger.name = 'Mr.' + passenger.name;
+
+  if (passenger.passport === 125484564) {
+    alert('Check in');
+  } else {
+    alert('wrong passport!');
+  }
+};
+
+checkIn(flight, tako);
+console.log(flight);
+console.log(tako);
