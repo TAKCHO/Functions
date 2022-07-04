@@ -32,7 +32,7 @@ createBooking('LH123', undefined, 1000);
 
 // /////// VALUES VS REFERENCE
 
-const flight = 'LH123';
+/* const flight = 'LH123';
 const tako = {
   name: 'Tako GIO',
   passport: 125484564,
@@ -52,3 +52,10 @@ const checkIn = function (flightNum, passenger) {
 checkIn(flight, tako);
 console.log(flight);
 console.log(tako);
+
+const newPassport = function (person) {
+  person.passport = Math.trunc(Math.random() * 100000000);
+};
+
+newPassport(tako);
+checkIn(flight, tako); */
