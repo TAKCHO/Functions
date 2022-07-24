@@ -60,4 +60,13 @@ const newPassport = function (person) {
 newPassport(tako);
 checkIn(flight, tako); */
 
-const 
+///////////// Accepting callback functions
+
+const oneWord = function (str) {
+  return str.replace(/ /g, '').toLowerCase();
+};
+
+const upperFirstWord = function (str) {
+  const [first, ...others] = str.split(' ');
+  return [first.toUpperCase(), ...others].join(' ');
+};
