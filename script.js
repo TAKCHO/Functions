@@ -60,7 +60,7 @@ const newPassport = function (person) {
 newPassport(tako);
 checkIn(flight, tako); */
 
-///////////// Accepting callback functions
+/* ///////////// Accepting callback functions
 
 const oneWord = function (str) {
   return str.replace(/ /g, '').toLowerCase();
@@ -81,3 +81,22 @@ const transformer = function (str, fn) {
 
 transformer('Javascript is the best!', upperFirstWord);
 transformer('Javascript is the best!', oneWord);
+ */
+
+//////////// functions returning functions
+
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+const greeterHey = greet('Hey');
+greeterHey('tako');
+greeterHey('Jonas');
+
+greet('Hello')('Tako');
+
+//Challenge writing with arrows
+const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+greetArr('Hi')('Tako');
