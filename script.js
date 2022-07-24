@@ -84,7 +84,7 @@ transformer('Javascript is the best!', oneWord);
  */
 
 //////////// functions returning functions
-
+/* 
 const greet = function (greeting) {
   return function (name) {
     console.log(`${greeting} ${name}`);
@@ -100,3 +100,28 @@ greet('Hello')('Tako');
 //Challenge writing with arrows
 const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 greetArr('Hi')('Tako');
+ */
+
+///////The Call and Apply Methods
+
+const lufthansa = {
+  airline: 'Lufthansa',
+  iataCode: 'LH',
+  bookings: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode} ${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.iataCode} ${flightNum}`, name });
+  },
+};
+
+lufthansa.book(455, 'Tako Giorgobiani');
+lufthansa.book(125, 'John Smith');
+console.log(lufthansa);
+
+const eurowings = {
+  name: 'Eurowings',
+  iataCode: 'EW',
+  bookings: [],
+};
