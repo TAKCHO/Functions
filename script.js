@@ -148,3 +148,8 @@ book.call(swiss, 853, 'Mary Cooper');
 console.log(swiss);
 
 // Apply Method
+const flightData = [586, 'George Cloone'];
+book.apply(swiss, flightData);
+console.log(swiss);
+
+book.call(swiss, ...flightData);
