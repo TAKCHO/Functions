@@ -103,7 +103,7 @@ greetArr('Hi')('Tako');
  */
 
 ///////The Call and Apply Methods
-
+/* 
 const lufthansa = {
   airline: 'Lufthansa',
   iataCode: 'LH',
@@ -201,7 +201,7 @@ const addTaxRate = function (rate) {
 
 const addVAT2 = addTaxRate(0.23);
 console.log(addVAT2(100));
-console.log(addVAT2(23));
+console.log(addVAT2(23)); */
 
 // INVOKED FUNCTION EXPRESSIONS IIFE
 
@@ -213,4 +213,15 @@ runOnce();
 
 (function () {
   console.log('This will never run again');
+  const isPrivate = 23;
 })();
+
+(() => console.log('This will never run again'))();
+
+{
+  const isPrivate = 23;
+  var notPrivate = 46;
+}
+
+// console.log(isPrivate);
+console.log(notPrivate);
