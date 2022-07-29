@@ -204,7 +204,7 @@ console.log(addVAT2(100));
 console.log(addVAT2(23)); */
 
 // INVOKED FUNCTION EXPRESSIONS IIFE
-
+/* 
 const runOnce = function () {
   console.log('This will never run again!');
 };
@@ -225,3 +225,6 @@ runOnce();
 
 // console.log(isPrivate);
 console.log(notPrivate);
+ */
+
+///////////CLOSURES
