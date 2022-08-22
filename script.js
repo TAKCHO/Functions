@@ -228,9 +228,9 @@ runOnce();
 console.log(notPrivate);
  */
 
-///////////CLOSURES
+////////////////////CLOSURES////////////////
 
-const secureBooking = function () {
+/* const secureBooking = function () {
   let passengerCount = 0;
 
   return function () {
@@ -243,4 +243,34 @@ const booker = secureBooking();
 
 booker(); // 1 passengers
 booker(); // 2 passengers
-booker();
+booker(); // 3 passengers
+
+/* A closure is the closed-over variable environment of the execution context
+in which a function was created, even after that execution context is gone */
+
+/* console.dir(booker); */
+
+let f;
+
+const g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+};
+
+const h = function () {
+  const b = 777;
+  f = function () {
+    console.log(b * 2);
+  };
+};
+
+g();
+f();
+console.dir(f);
+
+// Re-assigning f function
+h();
+f();
+console.dir(f);
