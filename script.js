@@ -297,3 +297,14 @@ boardPassengers(180, 3);
   console.log('TIMER');
 }, 1000);
  */
+
+////CODING CHALLENGE
+
+(function () {
+  const header = document.querySelector('h1');
+  header.style.color = 'red';
+
+  document.querySelector('body').addEventListener('click', function () {
+    header.style.color = 'blue';
+  });
+})();
